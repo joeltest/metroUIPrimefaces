@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="./WEB-INF/templates/template.xhtml">
+
+            <ui:define name="content">
+                <div data-role="group" data-group-type="multi-state" data-button-style="class">
+                    <p:commandLink styleClass="button" value="Popup"
+                                   onclick="showDialog('#dialog')"
+                                   />
+                    <p:commandLink styleClass="button" value="Guardar2"/>
+                    <p:commandLink styleClass="button" value="Guardar3"/>
+                    <p:commandLink styleClass="button" value="Guardar4"/>
+
+                </div>
+
+                <!-- popup -->
+                <div data-role="dialog" id="dialog">
+                    <h1>Simple dialog</h1>
+                    <p>
+                        Dialog :: Metro UI CSS - The front-end framework
+                        for developing projects on the web in Windows Metro Style.
+                    </p>
+                </div>
+                
+                <script>
+                    function showDialog(id) {
+                        var dialog = $(id).data('dialog');
+                        dialog.open();
+                    }
+                </script>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

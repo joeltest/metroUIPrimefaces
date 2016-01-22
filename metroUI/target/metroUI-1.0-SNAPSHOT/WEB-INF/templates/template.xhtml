@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="#{request.contextPath}/recursos/MetroUI/build/css/metro.css" rel="stylesheet" />
+        <link href="#{request.contextPath}/recursos/MetroUI/build/js/metro.js" rel="stylesheet" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
+        <title>Facelets Template</title>
+    </h:head>
+
+    <h:body>
+
+        <div id="top" class="top">
+            <div class="app-bar">
+                <a class="app-bar-element" href="...">Home</a>
+                <span class="app-bar-divider"></span>
+                <ul class="app-bar-menu">
+                    <li><p:commandLink value="HOME"></p:commandLink></li>
+                    <li>
+                        <a href="" class="dropdown-toggle">Products</a>
+                        <ul class="d-menu" data-role="dropdown">
+                            <li><p:commandLink value="HOME"></p:commandLink>  </li>
+                            <li><p:commandLink value="loquesea"></p:commandLink> </li>
+                            <li><p:commandLink value="HOME"></p:commandLink> </li>
+                            <li><a href="">Office 2015</a></li>
+                            <li class="divider"></li>
+                            <li><a href="" class="dropdown-toggle">Other Products</a>
+                                <ul class="d-menu" data-role="dropdown">
+                                    <li><a href="">Internet Explorer 10</a></li>
+                                    <li><a href="">Skype</a></li>
+                                    <li><a href="">Surface</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="">Support</a></li>
+                    <li><a href="">Help</a></li>
+                </ul>
+            </div>
+            <ui:insert name="top">
+
+            </ui:insert>
+        </div>
+
+        <div id="content" class="center_content">
+            <ui:insert name="content">Content</ui:insert>
+        </div>
+
+    </h:body>
+
+</html>
